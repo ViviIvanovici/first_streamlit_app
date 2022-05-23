@@ -44,3 +44,9 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("*** from snowflake *** ")
 streamlit.header("The fruit load list contains :")
 streamlit.dataframe(my_data_rows)
+
+
+add_my_fruit =streamlit.text_input('what fruit would you like to add ? ','kiwi')
+streamlit.write('Thank you for adding jack ', add_my_fruit)
+
+
