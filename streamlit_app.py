@@ -23,6 +23,9 @@ streamlit.dataframe(my_fruit_select)
 
 streamlit.header('Fruityvice Fruit Advice!')
 
+fruit_choise =streamlit.text_input('what fruit would you like information about ? ','kiwi')
+streamlit.write('The user entered', fruit_choise)
+
 import requests
 fruityvice_reponse=requests.get("https://fruityvice.com/api/fruit/watermelon")
 
