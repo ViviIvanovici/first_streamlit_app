@@ -1,7 +1,7 @@
 
 import streamlit
 import pandas
-import requests
+
 
 streamlit.title('the new job')
 
@@ -21,5 +21,8 @@ my_fruit_select = my_fruit_list.loc[fruit_selected]
 
 streamlit.dataframe(my_fruit_select)
 
+streamlit.header('Fruityvice Fruit Advice!')
+
+import requests
 fruityvice_reponse=requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_reponse)
+streamlit.text(fruityvice_reponse.json())
