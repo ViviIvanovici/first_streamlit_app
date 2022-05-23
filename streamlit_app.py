@@ -28,7 +28,7 @@ streamlit.header('Fruityvice Fruit Advice!')
 try:
   fruit_choise = streamlit.text_input('what fruit would you like information about ?')
   if not fruit_choise:
-    streamlit.error(Please select a fruit to get information.")
+    streamlit.error("Please select a fruit to get information.")
   else:
     fruityvice_reponse=requests.get("https://fruityvice.com/api/fruit/"+fruit_choise)
     fruityvice_normalized = pandas.json_normalize(fruityvice_reponse.json())
