@@ -27,7 +27,7 @@ fruit_choise =streamlit.text_input('what fruit would you like information about 
 streamlit.write('The user entered', fruit_choise)
 
 import requests
-fruityvice_reponse=requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_reponse=requests.get("https://fruityvice.com/api/fruit/"+fruit_choise)
 
 
 #take the json version of the response and normalize it
