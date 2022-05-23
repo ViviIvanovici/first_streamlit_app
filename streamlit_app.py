@@ -44,7 +44,7 @@ except URLError as e:
 #streamlit.write('The user entered', fruit_choise)
 
 
-#streamlit.stop()
+
 
 streamlit.header("The fruit load list contains :")
 #snowflake-related functions
@@ -61,8 +61,8 @@ if streamlit.button('Get Fruit Load List'):
 
 
 
+streamlit.stop()
+add_my_fruit =streamlit.text_input('what fruit would you like to add ? ','kiwi')
+streamlit.write('Thank you for adding ', add_my_fruit)
 
-#add_my_fruit =streamlit.text_input('what fruit would you like to add ? ','kiwi')
-#streamlit.write('Thank you for adding ', add_my_fruit)
-
-#my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
